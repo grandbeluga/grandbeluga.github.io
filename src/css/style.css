@@ -55,6 +55,8 @@ a {
 div.column {
     max-width: 50em;
     flex-grow: 1;
+    padding-right: 2em;
+    padding-left: 2em;
 }
 
 div.nav {
