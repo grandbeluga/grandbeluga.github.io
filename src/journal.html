@@ -3,4 +3,25 @@ layout: layouts/base.html
 title: journal
 ---
 
-<p><a href="/posts/cityscape_algorithm">cityscape algorithm.</a></p>
+<div class="headers">
+    <h1>Journal</h1>
+</div>
+
+{%- if collections.blog.size > 0 -%}
+<p>I call this a journal because I've moved on from the term blog and think it's cooler. However, I'll probably end up
+changing it back.</p>
+<ul class="post-list">
+    {%- for post in collections.blog reversed -%}
+    <li>
+        <span class="post-meta"><i>{{ post.date | date: "%Y-%m-%d" }}</i></span>
+        --
+        <a class="post-link" href="{{ post.url }}">
+            {{ post.data.title }}
+        </a>
+    </li>
+    {%- endfor -%}
+</ul>
+
+{%- else -%}
+<p>If you're seeing this, I've reset the page. I've snapped, gone full Thanos.</p>
+{%- endif -%}
