@@ -23,7 +23,9 @@ h5,
 h6 {
   color: #f3ffff;
   text-align: left;
-  padding-left: 1em;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1.5px;
+  /* padding-left: 1em; */
 }
 
 p {
@@ -105,6 +107,6 @@ span a :hover {
 }
 
 .headers {
-  border: solid;
-  border-width: 1px;
+  /* border: solid;
+  border-width: 1px; */
 }
