@@ -14,7 +14,7 @@ changing it back.</p>
     {%- for post in collections.blog reversed -%}
     <li>
         <span class="post-meta"><i>{{ post.date | date: "%Y-%m-%d" }}</i></span>
-        --
+        -
         <a class="post-link" href="{{ post.url }}">
             {{ post.data.title }}
         </a>
