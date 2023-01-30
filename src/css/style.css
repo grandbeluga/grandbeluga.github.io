@@ -23,7 +23,7 @@ h5,
 h6 {
   color: #f3ffff;
   text-align: left;
-  text-decoration-line: underline;
+  /* text-decoration-line: underline; */
   text-decoration-thickness: 1.5px;
   /* padding-left: 1em; */
 }
@@ -72,7 +72,7 @@ li {
 }
 
 div.column {
-  max-width: 50em;
+  max-width: 55em;
   flex-grow: 1;
   padding-right: 2em;
   padding-left: 2em;
@@ -117,6 +117,26 @@ span a :hover {
 .headers {
   /* border: solid;
   border-width: 1px; */
+}
+
+table {
+  text-align: left;
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid;
+}
+
+td,
+th {
+  padding: 10px;
+  border: 1px solid;
+}
+
+tr {
+  padding: 20px 20px 10px 10px;
+}
+
+tbody {
 }
 
 @media screen and (max-width: 750px) {
