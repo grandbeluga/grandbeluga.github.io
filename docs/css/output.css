@@ -550,6 +550,14 @@ video {
   overflow-x: auto;
 }
 
+.border-r-2 {
+  border-right-width: 2px;
+}
+
+.border-r {
+  border-right-width: 1px;
+}
+
 *,
 *::before,
 *::after {
@@ -701,13 +709,13 @@ table {
   text-align: left;
   border-collapse: collapse;
   width: 100%;
-  border: 1px solid;
+  border-right: none;
 }
 
 td,
 th {
   padding: 10px;
-  border: 1px solid;
+  border-bottom: 1px solid;
 }
 
 .in-progress {
@@ -722,6 +730,12 @@ th {
 
 tr {
   padding: 20px 20px 10px 10px;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #fff;
 }
 
 tbody {
