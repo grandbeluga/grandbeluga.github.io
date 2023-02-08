@@ -550,10 +550,6 @@ video {
   overflow-x: auto;
 }
 
-.border-r-2 {
-  border-right-width: 2px;
-}
-
 .border-r {
   border-right-width: 1px;
 }
@@ -725,6 +721,11 @@ th {
 
 .completed {
   color: #8ce6ff;
+  border-color: white;
+}
+
+.queued {
+  color: #eacb57;
   border-color: white;
 }
 
