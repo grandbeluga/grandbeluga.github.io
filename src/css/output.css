@@ -605,6 +605,7 @@ p {
   color: #f3ffff;
   font-size: 16px;
   line-height: 2em;
+  margin-bottom: 10px;
 }
 
 a {
@@ -749,4 +750,11 @@ tbody {
     margin-bottom: 20px;
     height: 50px;
   }
+}
+
+ul {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  margin-left: 40px;
+  list-style-type: disc;
 }
