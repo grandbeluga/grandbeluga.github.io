@@ -618,7 +618,7 @@ a {
 }
 
 li {
-  color: white;
+  color: #e0dbcd;
   line-height: 1.75em;
 }
 
@@ -717,31 +717,33 @@ td,
 th {
   padding: 10px;
   border-bottom: 1px solid;
+  border-color: #e0dbcd;
 }
 
 .in-progress {
   color: #ffb166;
-  border-color: white;
+  border-color: #e0dbcd;
 }
 
 .completed {
   color: #8ce6ff;
-  border-color: white;
+  border-color: #e0dbcd;
 }
 
 .queued {
   color: #eacb57;
-  border-color: white;
+  border-color: #e0dbcd;
 }
 
 tr {
   padding: 20px 20px 10px 10px;
+  border-color: #e0dbcd;
 }
 
 hr {
   border: none;
   height: 1px;
-  background-color: #fff;
+  background-color: #e0dbcd;
 }
 
 tbody {
