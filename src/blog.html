@@ -1,27 +1,27 @@
 ---
 layout: layouts/base.html
-title: blog
+title: Blog
 ---
 
-<div class="headers">
-    <h1>Blog</h1>
-</div>
+<h1>Blog Posts</h1>
 
 {%- if collections.blog.size > 0 -%}
-<p>Random writings, thoughts, and nonsense.</p>
-<hr class="solid my-10">
-<ul class="post-list">
+<article>
+  <ul class="ml-0">
     {%- for post in collections.blog reversed -%}
-    <li>
-        <span class="post-meta"><i>{{ post.date | date: "%Y-%m-%d" }}</i></span>
-        -
-        <a class="post-link" href="{{ post.url }}">
-            {{ post.data.title }}
-        </a>
+    <li class="list-none ml-0 h-8">
+      <span class="post-meta">{{ post.date | date: "(%b %d, %Y)" }}</span>
+      |
+      <a class="post-link font-bold text-lg" href="{{ post.url }}">
+        {{ post.data.title }}
+      </a>
     </li>
     {%- endfor -%}
-</ul>
+  </ul>
 
-{%- else -%}
-<p>If you're seeing this, I've reset the page. I've snapped, gone full Thanos.</p>
-{%- endif -%}
+  {%- else -%}
+  <p>
+    If you're seeing this, I've reset the page. I've snapped, gone full Thanos.
+  </p>
+  {%- endif -%}
+</article>
