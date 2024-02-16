@@ -9,7 +9,7 @@ title: Blog
 <article>
   <ul class="ml-0">
     {%- for post in collections.blog reversed -%}
-    <li class="list-none ml-0 h-8">
+    <li class="list-none ml-0 leading-10">
       <span class="post-meta">{{ post.date | date: "(%b %d, %Y)" }}</span>
       |
       <a class="post-link font-bold text-lg" href="{{ post.url }}">

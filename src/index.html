@@ -23,7 +23,7 @@ title: whaies.dev
     <ul class="ml-0">
       {% assign top_posts = collections.blog | reverse %} {%- for post in
       top_posts limit:5 -%}
-      <li class="list-none ml-0 h-10">
+      <li class="list-none ml-0 leading-10">
         <span class="post-meta">{{ post.date | date: "(%b %d, %Y)" }}</span>
         |
         <a class="post-link font-bold text-lg" href="{{ post.url }}">
