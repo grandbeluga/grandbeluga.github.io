@@ -1,6 +1,7 @@
 ---
 layout: layouts/base.html
 title: Hollow Knight, Game Jams, and Elden Ring.
+date: 2024-09-19
 tags: blog
 author: whaies
 ---
