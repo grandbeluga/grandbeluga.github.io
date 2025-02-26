@@ -6,9 +6,11 @@ title: Blog
 <h1>Blog Posts</h1>
 
 {%- if collections.blog.size > 0 -%}
-<article>
-  <ul class="ml-0">
-    {%- for post in collections.blog reversed -%}
+
+<article class="mb-5">
+  <details open="">
+    <summary class="text-2xl font-semibold">2025</summary>
+    {%- for post in collections.twentytwentyfive reversed -%}
     <li class="list-none ml-0 leading-10">
       <span class="post-meta">{{ post.date | date: "(%b %d, %Y)" }}</span>
       |
@@ -17,12 +19,28 @@ title: Blog
       </a>
     </li>
     {%- endfor -%}
-  </ul>
-
-  {%- else -%}
-  <p>
-    If you're seeing this, I've reset the page. I've snapped, gone full Thanos.
-  </p>
-  {%- endif -%}
+  </details>
 </article>
 
+<article>
+  <details>
+    <summary class="text-2xl font-semibold">All Posts</summary>
+    <ul class="ml-0">
+      {%- for post in collections.blog reversed -%}
+      <li class="list-none ml-0 leading-10">
+        <span class="post-meta">{{ post.date | date: "(%b %d, %Y)" }}</span>
+        |
+        <a class="post-link font-bold text-lg" href="{{ post.url }}">
+          {{ post.data.title }}
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    {%- else -%}
+    <p>
+      If you're seeing this, I've reset the page. I've snapped, gone full Thanos. test.
+    </p>
+    {%- endif -%}
+  </details>
+</article>
