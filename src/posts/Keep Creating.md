@@ -1,0 +1,31 @@
+---
+layout: layouts/base.html
+title: Keep Creating
+tags: [blog, twentytwentyfive]
+author: whaies
+---
+
+## {{ title }} | May 22nd, 2025
+
+_initially posted on my [substack](https://ethanbliese.substack.com/p/keep-creating) on April 8, 2025._
+
+I drew a lot as a kid. I still have old notebooks half-filled with strange monsters, muscular super heroes, and story ideas for comics I was going to create. I'm still a Calvin & Hobbes junkie; every single time I read it, I think about trying to create something inspired by it. I also took piano lessons, learned to play guitar, wrote some music. I considered myself an artist. As I got older, I told myself I wanted to make things that really mattered. I wanted my art to stand out, to be unique, to speak up and over all of the noise! I believed it had to be 100% original, different, and entirely my own. No one else could have thought of this. So I...barely created. Life experiences and fear taught me to believe that I didn't have anything valuable to say, or that what I had created wasn't all that important. I couldn't create something life changing on the first try, so why bother? I never stopped trying, but the trying was hard. It was painful, slow, and fruitless. The dreaming and wondering about the what ifs were a lot more fun, so I did a lot more of that. With time, most my hobbies fell to the wayside and I tried not to mention my interests. When I did slip up, I awkwardly tried to convince people that "I used to do that, but I never knew what I was doing", so there wasn't really anything to talk about. Time, therapy, and growth has helped me work through the whys and bring me to today. All that to say...
+
+Art and the creative expression of the individual are extremely valuable.
+
+Your voice matters. You're a person with depth that the ocean cannot even begin to compare itself to. You have ideas, thoughts, dreams, experiences, and a story completely different from mine. Are all of those unique and completely original? No way, and neither are mine. Our stories all intersect in the vast crossroads of life in a way that's essential for creating relationship. Similarities create relatability. From a young age, we each find people like us, people who get us, who think like us, and who make us feel safe. We grow, we test, we learn, and build a self from that space. Everyone's journey looks different in its own ways. Sometimes those ways are similar to someone else. Sometimes you run into someone who's different, and it challenges your notions. It makes you look at the world in a new way. Sometimes you fall in love with that person because they're different. Sometimes you love them because they're the same as you. One way or another, your story is formed. Experience and formation make us who we are, which makes our art what it is. You are irreplaceable in the world, meaning your art is too.
+
+This post was initially inspired by my distaste for all things AI, something that's been formulating and churning around internally since image generators starting getting popular in recent years. I've used them to make silly pictures, I've used chatgpt to code, and I don't know whether or not it will stick around long term. To be clear, this is more a judgement of the thing itself and how easily we accept the empty promises that technology will make our lives better, rather than a judgement of the users. It’s a complex topic that’s lead to many interesting conversations in my life, and I’m thankful for that. But it's become abundantly clear that the companies making AI don't have anyone's best interest in mind, and it's a "tool" that's going to make us boring and lazy at best. When I sat down to start writing, I realized I didn't really want to talk about any of that, but the context felt valuable to reinforce what I'm trying to express about the value of human creation. I would sum up my own feelings this way: if your only goal is making content, then AI is a great tool. But content is generally vapid, heartless, and serves primarily to make money. You have more to offer than content, and mainstream art already suffers enough from contentification.
+
+I really love art and I love that humans create it. I love that my friends write. I love that my friends take pictures. I love that they design Pathfinder 2e campaigns. I love that they make music. I get to experience joy because they took the time to engage with the world and share a part of themselves in a meaningful, vulnerable, genuine way. AI cannot do that. Your painstakingly created prompt is merely a fraction of the artistic wealth you possess, and you're cheapening what you have to offer by asking a machine to “create” for you. For anyone worried that AI will threaten the merit of your work: it never will. The moment a machine makes something that's merely a Frankenstein of stolen creations from the internet, its already useless. You're worth more than that. Your art matters so much more than you may ever realize. Beauty wants to be shared and experienced. It needs to be.
+
+So keep being brave. Keep writing, creating, and trying hard things. Continue to seek opportunities to learn and grow. Keep sharing yourself with others in relationship and seeking to know others more. Ignore all of the noise, disconnect from the internet and your phone more often, and engage with the world around you. Create something, and share it with someone. Appreciate something someone shares with you. We're all made better for it.
+
+Thanks for reading.
+
+some of the artistic endeavors I’ve enjoyed recently:<br>
+[The Paschal Mystery](https://paschalmystery.substack.com/p/the-paschal-mystery), a post by Rachel Bliese<br>
+[For Your Glory, Pt. 2](https://open.spotify.com/album/6n9yOweyVsh3oaPKDuIR3i?si=lPTqcxsQSvunr6-BcNFlBA), an album by Bo Elder<br>
+[Bummock](https://alectroemel.com/games/bummock.html), a game by Alec Troemel<br>
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6tQLBxVNF34clXJBUEMfj1?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
