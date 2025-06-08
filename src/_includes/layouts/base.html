@@ -6,6 +6,17 @@ title: base template
 <html lang="en">
 
 <head>
+    <script>
+        if (
+            localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/whaiesfavi.ico">
@@ -16,20 +27,21 @@ title: base template
     <title>{{ title }}</title>
 </head>
 
-<body>
+<body class="dark:bg-[#2D2C27]">
     <div class="body_container">
-        <div class="nav_container basecontainer">
+        <div class="nav_container basecontainer dark:bg-[#4C5047]">
             {%- include "layouts/header.html" -%}
         </div>
-        <div class="content_container basecontainer">
+        <div class="content_container basecontainer dark:bg-[#2D2C27]">
             <div class="column">
                 {{ content }}
             </div>
         </div>
-        <div class="footer_container basecontainer">
+        <div class="footer_container basecontainer dark:bg-[#4C5047]">
             {%- include "layouts/footer.html" -%}
         </div>
     </div>
+    <script type="module" src="/js/bundle.js"></script>
 </body>
 
 </div>

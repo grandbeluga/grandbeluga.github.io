@@ -3,6 +3,17 @@
 <html lang="en">
 
 <head>
+    <script>
+        if (
+            localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/whaiesfavi.ico">
@@ -13,72 +24,76 @@
     <title>whaies.dev</title>
 </head>
 
-<body>
+<body class="dark:bg-[#2D2C27]">
     <div class="body_container">
-        <div class="nav_container basecontainer"><div class="nav">
-        <span class="px-0 font-semibold"><a href="/" class="hover:text-[#e0dbcd;]">whaies.dev</a></span>
+        <div class="nav_container basecontainer dark:bg-[#4C5047]"><div class="nav">
+        <span class="px-0 font-semibold"><a href="/" class="hover:text-[#D18E67]">whaies.dev</a></span>
 
         <div class="nav_links">
-            <span class="nav_link"><a href="/projects">Projects</a></span>
+            <span class="nav_link"><a href="/projects" class="dark:color-[#D18E67]">Projects</a></span>
             <span class="nav_link"><a href="/blog">Blog</a></span>
             <span class="nav_link"><a href="/archive">Archive</a></span>
         </div>
+        <button id="dark-mode-toggle">
+            <span class="dark:hidden"><img src="/images/moon_icon.png" style="width:20px;"></span>
+            <span class="hidden dark:inline"><img src="/images/sun_icon.png" style="width:20px;"></span>
+        </button>
 </div></div>
-        <div class="content_container basecontainer">
+        <div class="content_container basecontainer dark:bg-[#2D2C27]">
             <div class="column">
                 
-<h1 class="mb-5">Hi, Ethan here.</h1>
-<p class="mb-5">
+<h1 class="mb-5 dark:text-[#D1D1C6]">Hi, Ethan here.</h1>
+<p class="mb-5 dark:text-[#D1D1C6]">
   I'm a follower of Jesus, husband, developer, photographer, music maker, pixel
   artist, and enjoyer of various video games. Here in my small corner of the
   world you can find links to my <a href="/projects">creative projects</a>,
   <a href="/blog">random writings</a>, and stuff I'm actively enjoying below.
 </p>
-<p>
+<p class="dark:text-[#D1D1C6]">
   Feel free to sit down, take off your shoes, and maybe roast a marshmallow over
   an existential firepit.
 </p>
-<hr class="mb-10" />
+<hr class="mb-10 dark:bg-[#D1D1C6]" />
 
-<section><h2 class="mb-5">Latest posts</h2>
-  <article>
+<section><h2 class="mb-5 dark:text-[#D1D1C6]">Latest posts</h2>
+  <article class="dark:bg-[#4C5047]">
     <ul class="ml-0">
       <li class="list-none ml-0 leading-10">
         <span class="post-meta">(May 22, 2025)</span>
         |
-        <a class="post-link font-bold text-lg" href="/posts/Keep Creating/">
+        <a class="post-link text-lg" href="/posts/Keep Creating/">
           Keep Creating
         </a>
       </li><li class="list-none ml-0 leading-10">
         <span class="post-meta">(Feb 28, 2025)</span>
         |
-        <a class="post-link font-bold text-lg" href="/posts/fall in love with the person in your front seat/">
+        <a class="post-link text-lg" href="/posts/fall in love with the person in your front seat/">
           fall in love with the person in your front seat.
         </a>
       </li><li class="list-none ml-0 leading-10">
         <span class="post-meta">(Feb 26, 2025)</span>
         |
-        <a class="post-link font-bold text-lg" href="/posts/waiting/">
+        <a class="post-link text-lg" href="/posts/waiting/">
           waiting
         </a>
       </li><li class="list-none ml-0 leading-10">
         <span class="post-meta">(Sep 18, 2024)</span>
         |
-        <a class="post-link font-bold text-lg" href="/posts/Hollow Knight, Game Jams, and Elden Ring/">
+        <a class="post-link text-lg" href="/posts/Hollow Knight, Game Jams, and Elden Ring/">
           Hollow Knight, Game Jams, and Elden Ring.
         </a>
       </li><li class="list-none ml-0 leading-10">
         <span class="post-meta">(Oct 24, 2023)</span>
         |
-        <a class="post-link font-bold text-lg" href="/posts/Inspiration/">
+        <a class="post-link text-lg" href="/posts/Inspiration/">
           Inspiration
         </a>
       </li></ul><p class="mb-0 mt-3 text-xs font-bold"><a href="/blog">Read more</a></p>
   </article>
 </section>
 <section>
-  <h2 class="mb-5">Books I'm reading</h2>
-  <article>
+  <h2 class="mb-5 dark:text-[#D1D1C6]">Books I'm reading</h2>
+  <article class="dark:bg-[#4C5047]">
     <div class="overflow-x-auto">
       <table class="mb-5">
         <tbody>
@@ -92,7 +107,7 @@
               <a href="https://en.wikipedia.org/wiki/Hyperion_(Simmons_novel)" target="_blank">Hyperion</a>
             </td>
             <td class="border-r">Dan Simmons</td>
-            <td class="in-progress">:in-progress</td>
+            <td class="completed">:completed</td>
           </tr>
           <tr>
             <td class="border-r">
@@ -121,8 +136,8 @@
   </article>
 </section>
 <section>
-  <h2 class="mb-5">Video games I'm playing</h2>
-  <article>
+  <h2 class="mb-5 dark:text-[#D1D1C6]">Video games I'm playing</h2>
+  <article class="dark:bg-[#4C5047]">
     <div class="overflow-x-auto">
       <table class="mb-5">
         <tbody>
@@ -164,7 +179,7 @@
               <a href="https://store.steampowered.com/app/6020/STAR_WARS_Jedi_Knight__Jedi_Academy/" target="_blank">Star Wars Jedi Knight: Jedi Academy</a>
             </td>
             <td class="border-r">Raven Software</td>
-            <td class="in-progress">:in-progress</td>
+            <td class="completed">:completed</td>
           </tr>
         </tbody>
       </table>
@@ -172,8 +187,8 @@
   </article>
 </section>
 <section>
-  <h2 class="mb-5">Web Ring</h2>
-  <article>
+  <h2 class="mb-5 dark:text-[#D1D1C6]">Web Ring</h2>
+  <article class="dark:bg-[#4C5047]">
     <ul class="ml-0 list-none font-semibold">
       <li>
         <a href="https://vingiesel.net" target="blank_">vingiesel.net</a>
@@ -200,19 +215,15 @@
 
             </div>
         </div>
-        <div class="footer_container basecontainer"><div class="footer column">
-    <a href="/"><img class="nav-image" src="/images/whales.png" style="width:40px;"></a>
-
-    <p class="mb-0">made with <a href="https://www.11ty.dev/">11ty.</a></p>
-
-    <div class="grid grid-cols-3">
-        <span class="foot_link"><a href="https://whaies.itch.io/" target="blank"><img src="/images/ctrl.png" style="width:25px;"></a></span>
-        <span class="foot_link"><a href="https://open.spotify.com/user/1273336116?si=90c44fae22c04313" target="blank"><img src="/images/spot.png" style="width:25px;"></a></span>
-        <!-- <span><a href="https://twitter.com/GrandBeluga"><img src="/images/twit.png" style="width:25px;"></a></span> -->
-        <span class="foot_link"><a href="https://www.instagram.com/whaies.dev/" target="blank"><img src="/images/inst.png" style="width:25px;"></a></span>
-    </div>
+        <div class="footer_container basecontainer dark:bg-[#4C5047]"><div class="footer column">
+    <p class="mb-0 text-[#e0dbcd]">made with <a href="https://www.11ty.dev/" class="hover:text-[#D18E67]">11ty.</a></p>
+    <button id="dark-mode-toggle-footer">
+        <span class="dark:hidden"><img src="/images/moon_icon.png" style="width:20px;"></span>
+        <span class="hidden dark:inline"><img src="/images/sun_icon.png" style="width:20px;"></span>
+    </button>
 </div></div>
     </div>
+    <script type="module" src="/js/bundle.js"></script>
 </body>
 
 </div>

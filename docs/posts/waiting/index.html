@@ -3,6 +3,17 @@
 <html lang="en">
 
 <head>
+    <script>
+        if (
+            localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) &&
+                window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/images/whaiesfavi.ico">
@@ -13,18 +24,22 @@
     <title>waiting</title>
 </head>
 
-<body>
+<body class="dark:bg-[#2D2C27]">
     <div class="body_container">
-        <div class="nav_container basecontainer"><div class="nav">
-        <span class="px-0 font-semibold"><a href="/" class="hover:text-[#e0dbcd;]">whaies.dev</a></span>
+        <div class="nav_container basecontainer dark:bg-[#4C5047]"><div class="nav">
+        <span class="px-0 font-semibold"><a href="/" class="hover:text-[#D18E67]">whaies.dev</a></span>
 
         <div class="nav_links">
-            <span class="nav_link"><a href="/projects">Projects</a></span>
+            <span class="nav_link"><a href="/projects" class="dark:color-[#D18E67]">Projects</a></span>
             <span class="nav_link"><a href="/blog">Blog</a></span>
             <span class="nav_link"><a href="/archive">Archive</a></span>
         </div>
+        <button id="dark-mode-toggle">
+            <span class="dark:hidden"><img src="/images/moon_icon.png" style="width:20px;"></span>
+            <span class="hidden dark:inline"><img src="/images/sun_icon.png" style="width:20px;"></span>
+        </button>
 </div></div>
-        <div class="content_container basecontainer">
+        <div class="content_container basecontainer dark:bg-[#2D2C27]">
             <div class="column">
                 <h2>waiting</h2>
 <p>On Monday of this week, I started a <a href="https://www.theaquariumwiki.com/wiki/Walstad_method">Walstad</a> planted tank. I’d planned to do this about a year ago, but life got busy and I decided I wasn’t really in the place for it. The idea is simple: 1-2 inches of dirt, capped with half as much sand, but not too fine of a sand that air and plant roots can’t get through. Gently fill the tank with water so as to not create a giant cloud of sand and dirt, plant a bunch of easy level water plants in said sand, and…wait. All you can really do now is have a good light routine. Diana Walstad herself recommends some version of 5 hours on, 4 hours off, 5 hours on, bedtime.</p>
@@ -35,19 +50,15 @@
 
             </div>
         </div>
-        <div class="footer_container basecontainer"><div class="footer column">
-    <a href="/"><img class="nav-image" src="/images/whales.png" style="width:40px;"></a>
-
-    <p class="mb-0">made with <a href="https://www.11ty.dev/">11ty.</a></p>
-
-    <div class="grid grid-cols-3">
-        <span class="foot_link"><a href="https://whaies.itch.io/" target="blank"><img src="/images/ctrl.png" style="width:25px;"></a></span>
-        <span class="foot_link"><a href="https://open.spotify.com/user/1273336116?si=90c44fae22c04313" target="blank"><img src="/images/spot.png" style="width:25px;"></a></span>
-        <!-- <span><a href="https://twitter.com/GrandBeluga"><img src="/images/twit.png" style="width:25px;"></a></span> -->
-        <span class="foot_link"><a href="https://www.instagram.com/whaies.dev/" target="blank"><img src="/images/inst.png" style="width:25px;"></a></span>
-    </div>
+        <div class="footer_container basecontainer dark:bg-[#4C5047]"><div class="footer column">
+    <p class="mb-0 text-[#e0dbcd]">made with <a href="https://www.11ty.dev/" class="hover:text-[#D18E67]">11ty.</a></p>
+    <button id="dark-mode-toggle-footer">
+        <span class="dark:hidden"><img src="/images/moon_icon.png" style="width:20px;"></span>
+        <span class="hidden dark:inline"><img src="/images/sun_icon.png" style="width:20px;"></span>
+    </button>
 </div></div>
     </div>
+    <script type="module" src="/js/bundle.js"></script>
 </body>
 
 </div>
