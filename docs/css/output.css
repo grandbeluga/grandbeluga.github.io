@@ -627,7 +627,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #4C5047;
+  /* color: #4C5047; */
   text-align: left;
   text-decoration-thickness: 1.5px;
   margin-top: 30px;
@@ -654,7 +654,7 @@ h3 {
 }
 
 p {
-  color: #4C5047;
+  /* color: #4C5047; */
   font-size: 16px;
   line-height: 2em;
   margin-bottom: 30px;
@@ -850,4 +850,9 @@ tbody {
 .dark .dark\:text-\[\#D1D1C6\] {
   --tw-text-opacity: 1;
   color: rgb(209 209 198 / var(--tw-text-opacity));
+}
+
+.dark .dark\:text-\[\#4C5047\] {
+  --tw-text-opacity: 1;
+  color: rgb(76 80 71 / var(--tw-text-opacity));
 }
