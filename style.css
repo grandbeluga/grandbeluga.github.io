@@ -1,13 +1,14 @@
-* {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
+body {
+    background-color: #ffffff;
+    color: #09090b;
 }
+
+html.dark body {
+    background-color: #09090b;
+    color: #ffffff;
+}
+
 
 .preload * {
     transition: none !important;
-}
-
-html.dark {
-    background-color: #09090b;
 }
