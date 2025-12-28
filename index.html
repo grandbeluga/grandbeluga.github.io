@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="pics/ttor_svg.svg">
+    <title>Ethan Bliese | Home</title>
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme');
+            const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (theme === 'dark' || (!theme && systemDark)) {
+                document.documentElement.classList.add('dark');
+            }
+        })();
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-white dark:bg-zinc-950 text-gray-900 dark:text-white antialiased"
+    style="font-family: 'EB Garamond', serif;">
+
+    <header
+        class="fixed top-0 left-0 right-0 h-14 bg-white dark:bg-zinc-950 border-b border-black dark:border-zinc-800 flex items-center justify-between px-8 z-[60]">
+        <div class="flex items-center gap-2 text-xl tracking-tight shrink-0 dark:text-zinc-100">
+            <svg class="w-5 h-5 fill-current text-black dark:text-white transition-colors duration-500" viewBox="0 0 2084 2084"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M507.938,1938.12c12.39,-3.546 25.526,-6.613 39.245,-9.259c123.562,-23.833 291.257,-11.873 417.093,32.44c145.192,51.13 266.159,77.335 368.353,86.991c-90.93,25.96 -186.925,39.861 -286.141,39.861c-197.032,-0 -381.36,-54.823 -538.55,-150.033Zm1569.2,-739.714c-171.403,104.731 -387.45,142.89 -757.819,54.492c43.272,-57.494 68.932,-128.98 68.932,-206.412c-0,-189.707 -154.019,-343.726 -343.726,-343.726c-189.708,0 -343.726,154.019 -343.726,343.726c-0,13.004 0.724,25.84 2.133,38.47c-209.02,-29.051 -430.493,-18.857 -584.075,32.815c-40.412,13.596 -76.337,30.29 -107.071,49.673c-4.598,-39.686 -6.962,-80.048 -6.962,-120.958c0,-574.911 466.756,-1041.67 1041.67,-1041.67c574.912,0 1041.67,466.756 1041.67,1041.67c-0,51.598 -3.76,102.324 -11.02,151.92Zm-408.603,683.466c-128.98,51.984 -318.887,84.254 -663.251,-37.014c-170.549,-60.059 -407.341,-67.599 -551.629,-19.055c-23.81,8.01 -45.29,17.686 -64.213,28.776c-77.234,-62.891 -145.294,-136.625 -201.853,-218.871c7.46,-5.727 15.81,-11.086 24.82,-16.197c37.005,-20.993 84.796,-36.128 138.857,-46.555c174.79,-33.714 412.012,-16.839 590.018,45.846c412.248,145.173 689.135,161.693 891.233,110.946c-49.035,56.351 -104.023,107.387 -163.982,152.124Zm292.109,-335.897c-191.69,111.001 -471.679,134.809 -978.354,-43.616c-231.415,-81.493 -552.697,-92.15 -748.479,-26.281c-42.6,14.332 -79.571,32.589 -109.953,54.1c-37.323,-70.988 -66.692,-146.799 -86.92,-226.244c12.893,-14.349 30.105,-26.836 50.12,-38.19c43.117,-24.46 98.773,-42.177 161.763,-54.326c201.576,-38.88 475.154,-19.437 680.44,52.855c564.897,198.929 881.218,193.173 1111.95,92.083c-20.654,66.283 -47.756,129.735 -80.571,189.619Z" />
+            </svg>
+            <a href="index.html"><span class="ml-1">Ethan Bliese</span></a>
+            <span>|</span>
+            <span id="page-breadcrumb"></span>
+        </div>
+
+        <div class="flex items-center gap-4 h-full">
+            <button onclick="toggleTheme()"
+                class="p-2 -mr-3 hover:bg-gray-100 dark:hover:bg-zinc-800 border border-transparent dark:text-zinc-400">
+                <svg class="hidden dark:block w-5 h-5" fill="currentColor" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+                <svg class="block dark:hidden w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-white dark:bg-zinc-950 z-[100] hidden flex-col justify-center items-center">
+        <button onclick="toggleMenu()"
+            class="absolute top-4 right-4 w-12 h-12 flex items-center justify-center border border-black dark:border-zinc-100 bg-white dark:bg-zinc-900">
+            <div class="relative w-6 h-6">
+                <span
+                    class="absolute top-1/2 left-0 w-6 h-[1.5px] bg-black dark:bg-white -translate-y-1/2 rotate-45"></span>
+                <span
+                    class="absolute top-1/2 left-0 w-6 h-[1.5px] bg-black dark:bg-white -translate-y-1/2 -rotate-45"></span>
+            </div>
+        </button>
+        <nav class="flex flex-col gap-8 text-center mb-10">
+            <a href="index.html" class="text-4xl dark:text-zinc-100">home</a>
+            <a href="https://ethanbliese.substack.com/" target="_blank" class="text-4xl dark:text-white">betweenspace</a>
+            <a href="discography.html" class="text-4xl dark:text-zinc-100">discography</a>
+        </nav>
+        <div class="pt-10 border-t border-black border-black dark:border-zinc-300 w-64 flex justify-center">
+            <nav class="flex flex-row gap-10 justify-center items-center">
+                <a href="https://ethanbliese.bandcamp.com/" target="_blank" class="hover:opacity-60 transition-opacity">
+                    <svg class="fill-black dark:fill-white transition-colors" width="30" height="30" role="img"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z" />
+                    </svg>
+                </a>
+        
+                <a href="https://open.spotify.com/artist/6xfrYSd3rQ9DwLRm4j2JX3?si=p0f_hr0tRw-6D87Wr66wEQ" target="_blank"
+                    class="hover:opacity-60 transition-opacity">
+                    <svg class="fill-black dark:fill-white transition-colors" width="30" height="30" role="img"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.13-10.561-1.17-.42.09-.84-.18-.93-.6-.09-.42.18-.84.6-.93 4.56-1.05 8.461-.6 11.641 1.35.36.24.48.66.24 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.6 13.438 1.68.42.3.6.84.3 1.261zm.12-3.48c-3.84-2.28-10.2-2.46-13.919-1.32-.6.18-1.2-.18-1.38-.78-.18-.6.18-1.2.78-1.38 4.32-1.32 11.34-1.08 15.72 1.5.54.3 1.08.3 1.38.84.24.54.06 1.08-.42 1.38-.54.3-.9.18-1.14.06z" />
+                    </svg>
+                </a>
+        
+                <a href="https://music.apple.com/us/artist/ethan-bliese/1760967210" target="_blank" class="hover:opacity-60 transition-opacity">
+                    <svg class="fill-black dark:fill-white transition-colors" width="30" height="30" role="img"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z" />
+                    </svg>
+                </a>
+        
+                <a href="https://ffm.bio/ethanbliese" target="_blank" class="hover:opacity-60 transition-opacity">
+                    <svg class="fill-black dark:fill-white transition-colors" width="30" height="30" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.35 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.35-1Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </nav>
+        </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row pt-14">
+        <aside
+            class="w-full md:w-72 md:fixed md:h-[calc(100vh-3.5rem)] border-b md:border-b-0 md:border-r border-black dark:border-zinc-800 flex flex-col justify-between bg-white dark:bg-zinc-950 z-30">
+            <div class="flex flex-col">
+                <div
+                    class="relative md:border-b border-black dark:border-zinc-800 h-72 bg-gray-50 dark:bg-zinc-900 flex items-center justify-center overflow-hidden">
+                    <a href="index.html"><img src="pics/pfp.webp"
+                            alt="profile image" class="w-full h-full object-cover dark:opacity-80" /></a>
+                    <button onclick="toggleMenu()"
+                        class="md:hidden absolute top-4 right-4 z-50 bg-white dark:bg-zinc-900 w-12 h-12 border border-black dark:border-zinc-100 grid place-content-center gap-1">
+                        <span class="w-6 h-[1.5px] bg-black dark:bg-white"></span>
+                        <span class="w-6 h-[1.5px] bg-black dark:bg-white"></span>
+                        <span class="w-6 h-[1.5px] bg-black dark:bg-white"></span>
+                    </button>
+                </div>
+
+                <nav class="hidden md:flex flex-col gap-0">
+                    <!-- <p class="block px-8 py-3 border-b border-black dark:border-zinc-800 hover:bg-gray-50 dark:hover:bg-zinc-900 text-lg text-gray-900 dark:text-zinc-300">
+                        hey, I'm Ethan. thanks for being here. to Jesus be the glory.</p> -->
+                    <a href="https://ethanbliese.substack.com/" target="_blank"
+                        class="block px-8 py-3 border-b border-black dark:border-zinc-800 hover:bg-gray-50 dark:hover:bg-zinc-900 text-lg text-gray-900 dark:text-white">betweenspace</a>
+                    <a href="discography.html"
+                        class="block flex items-center px-8 py-3 border-b border-black dark:border-zinc-800 hover:bg-gray-50 dark:hover:bg-zinc-900 text-lg text-gray-900 dark:text-white">discography</a>
+                    <div class="block flex items-center px-8 py-3 border-b border-black dark:border-zinc-800 hover:bg-gray-50 dark:hover:bg-zinc-900 text-lg text-gray-900 dark:text-white">
+                        <svg class="w-[18px] h-[18px] fill-current mr-2" role="img" viewBox="0 0 24 24">
+                            <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z" />
+                        </svg>
+                        <a href="https://ethanbliese.bandcamp.com" target="_blank">bandcamp</a>
+                    </div>
+                </nav>
+
+                <div class="p-8 pt-4 hidden md:block">
+                    <nav class="flex flex-col gap-4">
+                        <h3 class="text-lg dark:text-white">find me on streaming:</h3>
+                        <a href="https://open.spotify.com/artist/6xfrYSd3rQ9DwLRm4j2JX3?si=p0f_hr0tRw-6D87Wr66wEQ"
+                            target="_blank"
+                            class="flex items-center gap-3 text-sm text-gray-500 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors">
+                            <svg class="w-[18px] h-[18px] fill-current" role="img" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.13-10.561-1.17-.42.09-.84-.18-.93-.6-.09-.42.18-.84.6-.93 4.56-1.05 8.461-.6 11.641 1.35.36.24.48.66.24 1.021zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14 4.38-1.32 9.78-.6 13.438 1.68.42.3.6.84.3 1.261zm.12-3.48c-3.84-2.28-10.2-2.46-13.919-1.32-.6.18-1.2-.18-1.38-.78-.18-.6.18-1.2.78-1.38 4.32-1.32 11.34-1.08 15.72 1.5.54.3 1.08.3 1.38.84.24.54.06 1.08-.42 1.38-.54.3-.9.18-1.14.06z" />
+                            </svg>
+                            <span>spotify</span>
+                        </a>
+                        <a href="https://music.apple.com/us/artist/ethan-bliese/1760967210" target="_blank"
+                            class="flex items-center gap-3 text-sm text-gray-500 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors">
+                            <svg class="w-[18px] h-[18px] fill-current" role="img" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.994 6.124a9.23 9.23 0 00-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a5.022 5.022 0 00-1.877-.726 10.496 10.496 0 00-1.564-.15c-.04-.003-.083-.01-.124-.013H5.986c-.152.01-.303.017-.455.026-.747.043-1.49.123-2.193.4-1.336.53-2.3 1.452-2.865 2.78-.192.448-.292.925-.363 1.408-.056.392-.088.785-.1 1.18 0 .032-.007.062-.01.093v12.223c.01.14.017.283.027.424.05.815.154 1.624.497 2.373.65 1.42 1.738 2.353 3.234 2.801.42.127.856.187 1.293.228.555.053 1.11.06 1.667.06h11.03a12.5 12.5 0 001.57-.1c.822-.106 1.596-.35 2.295-.81a5.046 5.046 0 001.88-2.207c.186-.42.293-.87.37-1.324.113-.675.138-1.358.137-2.04-.002-3.8 0-7.595-.003-11.393zm-6.423 3.99v5.712c0 .417-.058.827-.244 1.206-.29.59-.76.962-1.388 1.14-.35.1-.706.157-1.07.173-.95.045-1.773-.6-1.943-1.536a1.88 1.88 0 011.038-2.022c.323-.16.67-.25 1.018-.324.378-.082.758-.153 1.134-.24.274-.063.457-.23.51-.516a.904.904 0 00.02-.193c0-1.815 0-3.63-.002-5.443a.725.725 0 00-.026-.185c-.04-.15-.15-.243-.304-.234-.16.01-.318.035-.475.066-.76.15-1.52.303-2.28.456l-2.325.47-1.374.278c-.016.003-.032.01-.048.013-.277.077-.377.203-.39.49-.002.042 0 .086 0 .13-.002 2.602 0 5.204-.003 7.805 0 .42-.047.836-.215 1.227-.278.64-.77 1.04-1.434 1.233-.35.1-.71.16-1.075.172-.96.036-1.755-.6-1.92-1.544-.14-.812.23-1.685 1.154-2.075.357-.15.73-.232 1.108-.31.287-.06.575-.116.86-.177.383-.083.583-.323.6-.714v-.15c0-2.96 0-5.922.002-8.882 0-.123.013-.25.042-.37.07-.285.273-.448.546-.518.255-.066.515-.112.774-.165.733-.15 1.466-.296 2.2-.444l2.27-.46c.67-.134 1.34-.27 2.01-.403.22-.043.442-.088.663-.106.31-.025.523.17.554.482.008.073.012.148.012.223.002 1.91.002 3.822 0 5.732z" />
+                            </svg>
+                            <span>apple music</span>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCAHNAaSHkWIA4N0nhNuuGMg" target="_blank"
+                            class="flex items-center gap-3 text-sm text-gray-500 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors">
+                            <svg class="w-[18px] h-[18px] fill-current" role="img" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                            <span>youtube</span>
+                        </a>
+                        <a href="https://ffm.bio/ethanbliese" target="_blank"
+                            class="flex items-center gap-3 text-sm text-gray-500 dark:text-zinc-300 hover:text-black dark:hover:text-white transition-colors">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M19.902 4.098a3.75 3.75 0 0 0-5.304 0l-4.5 4.5a3.75 3.75 0 0 0 1.035 6.037.75.75 0 0 1-.646 1.353 5.25 5.25 0 0 1-1.449-8.45l4.5-4.5a5.25 5.25 0 1 1 7.424 7.424l-1.757 1.757a.75.75 0 1 1-1.06-1.06l1.757-1.757a3.75 3.75 0 0 0 0-5.304Zm-7.389 4.267a.75.75 0 0 1 1-.35 5.25 5.25 0 0 1 1.449 8.45l-4.5 4.5a5.25 5.25 0 1 1-7.424-7.424l1.757-1.757a.75.75 0 1 1 1.06 1.06l-1.757 1.757a3.75 3.75 0 1 0 5.304 5.304l4.5-4.5a3.75 3.75 0 0 0-1.035-6.037.75.75 0 0 1-.35-1Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                            <span>all the rest</span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-4 border-t border-black dark:border-zinc-800 hidden md:block text-sm text-gray-400">
+                <p>© 2025 the tide turned over records</p>
+            </div>
+        </aside>
+
+        <div class="flex flex-col flex-1 bg-white dark:bg-zinc-950 text-gray-900 dark:text-zinc-300 md:ml-72">
+            <section
+                class="hidden md:block md:fixed md:top-14 md:right-0 md:left-72 z-20 bg-white dark:bg-zinc-950 border-b border-black dark:border-zinc-800 h-72 overflow-hidden">
+                <img src="pics/web_banner.webp" alt="banner"
+                    class="w-full h-full object-cover dark:opacity-70" />
+            </section>
+
+            <main class="grid xl:grid-cols-2 grid-cols-1 gap-10 relative p-8 mt-0 md:mt-72 md:py-16 md:pl-12 md:pr-16 max-w-7xl bg-white dark:bg-zinc-950 dark:text-white">
+                <section class="-mt-4">
+                    <h1 class="text-3xl dark:text-white mb-4">Hey, I'm Ethan.</h1>
+                    <div class="text-lg space-y-6 leading-relaxed">
+                        <p>Welcome. I make ambient music and love sharing about that process, so I try to write about it weekly in my ambient
+                        focused newsletter <i><a href="https://ethanbliese.substack.com/" class="underline">betweenspace</a></i>. I also write code, take pictures, and create all of my own branding; I love the process
+                        and opportunity to work with multiple art mediums in one project.
+                        <br>
+                        <br>
+                        I'm not a huge fan of modern social media, so I wanted to have somewhere other than instagram to send people who ask
+                        about my music and whatever other hobby related things I make; if you're here, it's probably because of one of those
+                        conversations. I appreciate you.
+                        <br>
+                        <br>
+                        Thanks for being here. To Jesus be the glory.</p>
+                    </div>
+                </section>
+
+                <!-- <h2 class="text-3xl dark:text-white mb-8">discography</h2> -->
+                <!-- <section class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <div class="flex flex-col gap-2">
+                        <div
+                            class="aspect-square bg-gray-100 dark:bg-zinc-900 border border-black dark:border-zinc-800 overflow-hidden">
+                            <a href="https://ethanbliese.bandcamp.com/track/snowfall" target="_blank"><img
+                                    src="pics/snowfall.jpg" alt="snowfall"
+                                    class="transition-transform duration-500"></a></div>
+                        <div class="flex flex-col"><span
+                                class="text-xl italic dark:text-white">snowfall</span><span>Ethan Bliese</span><span
+                                class="text-sm text-gray-500 dark:text-zinc-500">december 16th, 2025</span></div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div
+                            class="aspect-square bg-gray-100 dark:bg-zinc-900 border border-black dark:border-zinc-800 overflow-hidden">
+                            <a href="https://ethanbliese.bandcamp.com/track/quiet-waters" target="_blank"><img
+                                    src="pics/quiet_waters.jpg" alt="quiet waters"
+                                    class="transition-transform duration-500"></a></div>
+                        <div class="flex flex-col"><span class="text-xl italic dark:text-white">quiet
+                                waters</span><span>Ethan Bliese</span><span
+                                class="text-sm text-gray-500 dark:text-zinc-500">september 20th, 2025</span></div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div
+                            class="aspect-square bg-gray-100 dark:bg-zinc-900 border border-black dark:border-zinc-800 overflow-hidden">
+                            <a href="https://ethanbliese.bandcamp.com/track/beauty-awe" target="_blank"><img
+                                    src="pics/beauty_awe.jpg" alt="beauty awe"
+                                    class="transition-transform duration-500"></a></div>
+                        <div class="flex flex-col"><span class="text-xl italic dark:text-white">beauty,
+                                awe</span><span>Ethan Bliese</span><span
+                                class="text-sm text-gray-500 dark:text-zinc-500">june 13th, 2025</span></div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div
+                            class="aspect-square bg-gray-100 dark:bg-zinc-900 border border-black dark:border-zinc-800 overflow-hidden">
+                            <a href="https://ethanbliese.bandcamp.com/track/senescence" target="_blank"><img
+                                    src="pics/senescence_cover.jpg" alt="senescence"
+                                    class="transition-transform duration-500"></a></div>
+                        <div class="flex flex-col"><span
+                                class="text-xl italic dark:text-white">senescence</span><span>Ethan Bliese</span><span
+                                class="text-sm text-gray-500 dark:text-zinc-500">november 15th, 2024</span></div>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <div
+                            class="aspect-square bg-gray-100 dark:bg-zinc-900 border border-black dark:border-zinc-800 overflow-hidden">
+                            <a href="https://ethanbliese.bandcamp.com/album/summertide" target="_blank"><img
+                                    src="pics/summertide.jpg" alt="summertide"
+                                    class="transition-transform duration-500"></a></div>
+                        <div class="flex flex-col"><span
+                                class="text-xl italic dark:text-white">summertide</span><span>Ethan Bliese</span><span
+                                class="text-sm text-gray-500 dark:text-zinc-500">august 23rd, 2024</span></div>
+                    </div>
+                </section> -->
+                <section class="-mt-4">
+                    <div>
+                        <h2 class="text-3xl dark:text-white mb-8">Latest Release</h2>
+                        <iframe style="border: 0; width: 308px; height: 408px;"
+                            src="https://bandcamp.com/EmbeddedPlayer/track=2443429136/size=large/bgcol=ffffff/linkcol=333333/tracklist=false/transparent=true/"
+                            seamless><a href="https://ethanbliese.bandcamp.com/track/snowfall">snowfall by Ethan Bliese</a></iframe>
+                    </div>
+                </section>
+
+                <footer class="pt-6 border-t border-black dark:border-zinc-800 dark:bg-zinc-950 md:hidden text-sm text-gray-400">
+                    <p>© 2025 the tide turned over records</p>
+                </footer>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
